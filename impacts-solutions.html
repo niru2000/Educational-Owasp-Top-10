@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacts & Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">WebSecLearn</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">OWASP Top 10</a></li>
+                <li><a href="impacts-solutions.html">Impacts & Solutions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <h1>Impacts & Solutions</h1>
+
+        <div class="impact">
+            <h2>1. Injection</h2>
+            <p><strong>Impact:</strong> Injection attacks can lead to data loss, corruption, or unauthorized access to sensitive data. Attackers may exploit these flaws to execute unintended commands or access restricted data.</p>
+            <p><strong>Example:</strong> A SQL injection vulnerability could allow an attacker to retrieve all users' passwords from a database, potentially compromising user accounts.</p>
+            <p><strong>Solution:</strong> Use prepared statements and parameterized queries to prevent injection. Always validate and sanitize user inputs to ensure they are safe before processing.</p>
+        </div>
+
+        <div class="impact">
+            <h2>2. Broken Authentication</h2>
+            <p><strong>Impact:</strong> Broken authentication can result in unauthorized access to sensitive data or systems, allowing attackers to impersonate legitimate users or gain unauthorized access.</p>
+            <p><strong>Example:</strong> Weak password policies might allow attackers to use brute-force attacks to guess user credentials, gaining unauthorized access to accounts.</p>
+            <p><strong>Solution:</strong> Implement strong password policies, use multi-factor authentication (MFA), and ensure secure session management to mitigate authentication vulnerabilities.</p>
+        </div>
+
+        <div class="impact">
+            <h2>3. Sensitive Data Exposure</h2>
+            <p><strong>Impact:</strong> Sensitive data exposure can lead to the theft of personal, financial, or healthcare data. This can result in identity theft, financial loss, or unauthorized access to confidential information.</p>
+            <p><strong>Example:</strong> Transmitting credit card information over an unencrypted HTTP connection exposes it to interception by attackers.</p>
+            <p><strong>Solution:</strong> Encrypt sensitive data both in transit and at rest. Use HTTPS for secure communication and apply strong encryption methods for data storage.</p>
+        </div>
+
+        <div class="impact">
+            <h2>4. XML External Entities (XXE)</h2>
+            <p><strong>Impact:</strong> XXE attacks can lead to exposure of internal files, network requests to internal services, or denial of service. Attackers may exploit XXE vulnerabilities to access sensitive information or disrupt service.</p>
+            <p><strong>Example:</strong> An attacker could use an XXE payload to access internal configuration files or other sensitive documents on the server.</p>
+            <p><strong>Solution:</strong> Disable external entity processing in XML parsers. Use libraries and configurations that prevent XXE attacks and validate XML input to prevent malicious data.</p>
+        </div>
+
+        <div class="impact">
+            <h2>5. Broken Access Control</h2>
+            <p><strong>Impact:</strong> Broken access control allows unauthorized users to access or modify data or functionality that they should not be able
+
+                <div class="impact">
+                    <h2>6. Security Misconfiguration</h2>
+                    <p><strong>Impact:</strong> Security misconfiguration can leave applications and systems exposed to attack due to incorrect or insecure settings. This can result in unauthorized access or data breaches.</p>
+                    <p><strong>Example:</strong> Leaving default credentials unchanged on an admin panel can allow attackers to gain control of the application.</p>
+                    <p><strong>Solution:</strong> Regularly review and update security configurations. Apply security hardening practices and ensure that default settings are changed to secure ones.</p>
+                </div>
+
+                <div class="impact">
+                    <h2>7. Cross-Site Scripting (XSS)</h2>
+                    <p><strong>Impact:</strong> XSS attacks can allow attackers to execute scripts in a user's browser, leading to session hijacking, data theft, or redirecting users to malicious sites.</p>
+                    <p><strong>Example:</strong> An attacker can inject a script into a comment field that executes and steals session cookies from other users.</p>
+                    <p><strong>Solution:</strong> Validate and sanitize all user inputs. Use Content Security Policy (CSP) to restrict the sources from which scripts can be loaded.</p>
+                </div>
+
+                <div class="impact">
+                    <h2>8. Insecure Deserialization</h2>
+                    <p><strong>Impact:</strong> Insecure deserialization can lead to remote code execution, privilege escalation, or denial of service. Attackers can exploit deserialization vulnerabilities to manipulate application logic or execute arbitrary
+                        code.
+                    </p>
+                    <p><strong>Example:</strong> An attacker might modify serialized data to include malicious code, which gets executed when deserialized by the application.</p>
+                    <p><strong>Solution:</strong> Avoid deserializing data from untrusted sources. Implement integrity checks and use safe deserialization libraries that mitigate risks.</p>
+                </div>
+
+                <div class="impact">
+                    <h2>9. Using Components with Known Vulnerabilities</h2>
+                    <p><strong>Impact:</strong> Using components with known vulnerabilities can expose the application to attacks that exploit those vulnerabilities. This can lead to data breaches or system compromise.</p>
+                    <p><strong>Example:</strong> Running an outdated version of a library with a known vulnerability can be exploited by attackers to gain unauthorized access or control.</p>
+                    <p><strong>Solution:</strong> Regularly update and patch software components. Use tools to monitor and manage vulnerabilities in third-party libraries and frameworks.</p>
+                </div>
+
+                <div class="impact">
+                    <h2>10. Insufficient Logging & Monitoring</h2>
+                    <p><strong>Impact:</strong> Insufficient logging and monitoring can prevent the detection of attacks and make it difficult to respond to incidents. Attackers can exploit this lack of visibility to persist in the system undetected.</p>
+                    <p><strong>Example:</strong> An attacker may perform multiple failed login attempts without triggering alerts or logging, allowing them to eventually gain access through brute force.</p>
+                    <p><strong>Solution:</strong> Implement comprehensive logging and monitoring systems. Ensure that critical events are logged and alerts are set up for suspicious activities.</p>
+                </div>
+
+                <!-- Continue adding impacts and solutions for other vulnerabilities -->
+
+        </div>
+</body>
+
+</html>

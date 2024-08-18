@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP Top 10 Educational Platform</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">WebSecLearn</div>
+        <nav>
+            <ul>
+                <li><a href="#tab1" onclick="showTab('tab1')">OWASP Top 10</a></li>
+                <li><a href="impacts-solutions.html" showTab>Impacts & Solutions</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <div id="tab1" class="tab-content">
+        <h1>OWASP Top 10 Vulnerabilities</h1>
+        <div class="vuln">
+            <h2>1. Injection</h2>
+            <p>Injection flaws occur when untrusted data is sent to an interpreter as part of a command or query. The attacker's input can trick the interpreter into executing unintended commands or accessing data without proper authorization.</p>
+            <p><strong>Example:</strong> Consider a simple login form that is vulnerable to SQL injection:</p>
+            <pre><code>
+SELECT * FROM users WHERE username = 'admin' -- ' AND password = 'password';
+            </code></pre>
+        </div>
+
+
+
+
+        <div class="vuln">
+            <h2>2. Broken Authentication</h2>
+            <p>Broken authentication occurs when application functions related to authentication and session management are implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens, or to exploit other implementation flaws
+                to assume other users’ identities.</p>
+            <p><strong>Example:</strong> An application might allow weak passwords, making it easier for attackers to guess user credentials using brute force.</p>
+        </div>
+
+        <div class="vuln">
+            <h2>3. Sensitive Data Exposure</h2>
+            <p>Sensitive data exposure happens when applications do not adequately protect sensitive information, such as financial, healthcare, or personal data. Attackers may steal or modify such data to conduct fraud or other crimes.</p>
+            <p><strong>Example:</strong> An application transmits sensitive data, like credit card numbers, over an unencrypted connection (HTTP instead of HTTPS).</p>
+        </div>
+
+        <div class="vuln">
+            <h2>4. XML External Entities (XXE)</h2>
+            <p>XXE attacks occur when an XML processor parses XML input containing a reference to an external entity. This reference can be exploited to expose internal files, make HTTP requests, and more.</p>
+            <p><strong>Example:</strong> An XML document with an external entity reference:</p>
+            <pre><code>&lt;!DOCTYPE foo [&lt;!ELEMENT foo ANY &gt; &lt;!ENTITY xxe SYSTEM "file:///etc/passwd" &gt;]&gt;
+&lt;foo&gt;&amp;xxe;&lt;/foo&gt;</code></pre>
+        </div>
+
+        <div class="vuln">
+            <h2>5. Broken Access Control</h2>
+            <p>Broken access control occurs when restrictions on authenticated users are not properly enforced. Attackers can exploit these flaws to access unauthorized functionality or data, such as accessing another user’s account.</p>
+            <p><strong>Example:</strong> An attacker might modify the URL from <code>/user/123/profile</code> to <code>/user/124/profile</code> to access another user's profile without authorization.</p>
+        </div>
+
+        <div class="vuln">
+            <h2>6. Security Misconfiguration</h2>
+            <p>Security misconfiguration occurs when security settings are defined, implemented, and maintained inappropriately. This vulnerability can result from failing to secure the application, web server, database, or other components.</p>
+            <p><strong>Example:</strong> Leaving default configurations (such as default usernames and passwords) unchanged, allowing attackers to gain access.</p>
+        </div>
+
+        <div class="vuln">
+            <h2>7. Cross-Site Scripting (XSS)</h2>
+            <p>XSS occurs when an application includes untrusted data in a web page without proper validation or escaping. Attackers can execute scripts in the user's browser, which can lead to session hijacking, defacement, or redirecting users to malicious
+                sites.
+            </p>
+            <p><strong>Example:</strong> A script that executes within the victim’s browser:</p>
+            <pre><code>&lt;script&gt;alert('XSS')&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="vuln">
+            <h2>8. Insecure Deserialization</h2>
+            <p>Insecure deserialization occurs when untrusted data is used to abuse the logic of an application, leading to attacks such as remote code execution, replay attacks, and privilege escalation.</p>
+            <p><strong>Example:</strong> An attacker manipulates serialized objects, leading to unauthorized actions when these objects are deserialized.</p>
+        </div>
+
+        <div class="vuln">
+            <h2>9. Using Components with Known Vulnerabilities</h2>
+            <p>This vulnerability occurs when applications use libraries, frameworks, or other software components with known vulnerabilities. Attackers can exploit these vulnerabilities to take control of the server or application.</p>
+            <p><strong>Example:</strong> An application uses an outdated version of a framework that has a known vulnerability, making it easier for attackers to exploit.</p>
+        </div>
+
+        <div class="vuln">
+            <h2>10. Insufficient Logging & Monitoring</h2>
+            <p>Insufficient logging and monitoring allow attackers to further attack systems, maintain persistence, pivot to more systems, and tamper with, extract, or destroy data. Many breaches involve undetected incidents that remain unnoticed for extended
+                periods.
+            </p>
+            <p><strong>Example:</strong> An application fails to log critical security events, such as multiple failed login attempts, making it difficult to detect brute-force attacks.</p>
+        </div>
+
+        <div class="bottom-button">
+            <a href="https://thehackernews.com/" target="_blank" class="news-button">News</a>
+        </div>
+
+
+
+        <script src="scripts.js"></script>
+</body>
+
+</html>

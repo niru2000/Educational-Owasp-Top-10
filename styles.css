@@ -1,0 +1,147 @@
+        /* Reset some default styles */
+    
+    body,
+    h1,
+    h2,
+    p,
+    pre,
+    code {
+        margin: 0;
+        padding: 0;
+        /* Styles for the bottom button */
+        .bottom-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* Blue-colored button */
+        .news-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            /* Blue color */
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            /* Rounded button */
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+            /* Subtle shadow */
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-button:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+            transform: translateY(-2px);
+            /* Slight lift on hover */
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+            /* Enhanced shadow on hover */
+        }
+        .news-button:active {
+            background-color: #004494;
+            /* Even darker blue when clicked */
+            transform: translateY(1px);
+            /* Slight push down when clicked */
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+            /* Softer shadow when clicked */
+        }
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+        /* Header styling */
+        header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            background-color: #0056b3;
+        }
+        /* Tab content styling */
+        .tab-content {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .tab-content h1 {
+            color: #007bff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .vuln,
+        .impact {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            border-radius: 4px;
+        }
+        .vuln h2,
+        .impact h2 {
+            color: #343a40;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .vuln p,
+        .impact p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        /* Footer styling */
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
